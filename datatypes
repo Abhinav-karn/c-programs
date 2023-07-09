@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a=123;
+    cout<<a<<endl;
+    
+    char c='a';
+    cout<<c<<endl;
+    
+    bool v=false;
+    cout<<v<<endl;
+    
+    float f=1.2;
+    cout<<f<<endl;
+    
+    double d=1.43;
+    cout<<d<<endl;
+    //size of command used for finding size of datatype.
+    int size = sizeof(d);
+    cout<<"size is "<<size <<endl;
+}
