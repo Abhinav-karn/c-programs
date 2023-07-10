@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    /*int a,b;
+    cin>>a>>b;
+    cout<< "the value of a "<<a<<"the value of b "<<b<<endl;*/
+    
+    /*a= cin.get();
+    cout<<"values of a is "<<a<<endl;*/
+    /*int n;
+    cout<<"enter the number= "<<endl;
+    cin>>n;
+    if (n>0){
+        cout<<"number is positive"<<endl;
+    }
+    else if(n<0){
+        cout<<"number is negative"<<endl;
+    }
+    else{
+        cout<<"number is zero"<<endl;
+    }*/
+    int n;
+    cin>>n;
+    int i =2;
+    while(i<=n){
+        if(n%i==0){
+            cout<<"not prime"<<i<<endl;
+        }
+        else{
+            cout<<"prime"<<i<<endl;
+        }
+        i=i+1;
+    }
+    // Wap to print char with a to z or Ato Z or 0 to 9.  
+    // find sum of all even number betw 10 to 30.
+    //fabonacci series.
+    
+        
+
+    
+}
