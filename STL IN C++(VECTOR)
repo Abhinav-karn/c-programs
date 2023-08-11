@@ -1,0 +1,52 @@
+// vector in stl
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    //forming an vector with size 5 and initialise with 1.
+    vector<int> a(5,1);
+    cout<<"print array a "<<endl;
+    for(int i:a){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    //forming a vector with pushing .
+    vector<int> v;
+    cout<<"capacity-> "<<v.capacity()<<endl;
+    v.push_back(1);
+    cout<<"capacity-> "<<v.capacity()<<endl;
+    cout<<"value-> "<<v.size()<<endl;
+    v.push_back(2);
+    cout<<"capacity-> "<<v.capacity()<<endl;
+    cout<<"value-> "<<v.size()<<endl;
+    v.push_back(5);
+    cout<<"capacity-> "<<v.capacity()<<endl;
+    cout<<"value-> "<<v.size()<<endl;
+    
+    cout<<"element at 3rd index "<<v.at(2)<<endl;
+    
+    cout<<"front "<<v.front()<<endl;
+    cout<<"back "<<v.back()<<endl;
+    
+    cout<<"before pop"<<endl;
+    for(int i:v){
+        cout<<i<<" ";
+    }
+    
+    v.pop_back();
+    
+    cout<<"after pop"<<endl;
+    for(int i:v){
+        cout<<i<<" ";
+    }cout<<endl;
+    
+    cout<<"before clear size "<<v.size()<<endl;
+    v.clear();
+    cout<<"after clear size "<<v.size()<<endl;
+    
+
+    return 0;
+}
