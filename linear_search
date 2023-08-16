@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int linear_search(int arr[],int size,int key){
+    for(int i;i<size;i++){
+        if (arr[i]==key){
+            return i;
+        }
+    }
+    return -1;
+}
+
+
+int main()
+{
+    int array[8]={10,27,36,72,95,87,45,36};
+    int index = linear_search(array,8,36);
+     
+    cout<<"index of 36 is "<<index<<endl;
+
+    return 0;
+}
