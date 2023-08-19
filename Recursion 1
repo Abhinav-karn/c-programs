@@ -1,0 +1,35 @@
+//program 1 -simple recursion program.
+#include <iostream>
+
+using namespace std;
+int count=0;
+void print(){
+    if (count==5) return;
+    cout<<count<<endl;
+    count++;
+    print();
+}
+int main()
+{
+    print();
+
+    return 0;
+}
+
+//program 2
+// factorial of a number using recursion
+#include <iostream>
+
+using namespace std;
+int fact(int n){
+    if (n==0) return 1;
+    return n*fact(n-1);
+}
+int main()
+{
+    int n;
+    cin>>n;
+    cout<<fact(n);
+
+    return 0;
+}
