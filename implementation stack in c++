@@ -1,0 +1,61 @@
+#include <iostream>
+
+using namespace std;
+int maxsize = 5;
+int stack[5];  
+int top = -1;
+
+int isFull() {
+    if (top == maxsize - 1)  
+        return 1;
+    else
+        return 0;
+}
+
+int isEmpty() {
+    if (top == -1)
+        return 1;
+    else
+        return 0;
+}
+
+int peek() {
+    return stack[top];
+}
+
+void push(int item) {  
+    if (!isFull()) {
+        top = top + 1;
+        stack[top] = item;
+    } else {
+        cout << "stack is full" << endl;
+    }
+}
+
+int pop() {  
+    int item = -1;  
+    if (!isEmpty()) {
+        item = stack[top];
+        top = top - 1;
+    } else {
+        cout << "stack is empty" << endl;
+    }
+    return item;  
+}
+
+int main() {
+    push(2);
+    push(3);
+    push(6);
+
+    cout << "peek element of stack: " << peek() << endl;
+    cout << "elements are: " << endl;
+    while (!isEmpty()) {
+        int item = pop();
+        cout << item << endl;
+    }
+    cout << "is stack is empty " << isEmpty() << endl;
+    cout << "is stack is full  " << isFull()<< endl;
+
+    return 0;
+}
