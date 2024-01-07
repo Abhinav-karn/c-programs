@@ -1,0 +1,25 @@
+// recursive program for making travelling till destination
+#include <iostream>
+using namespace std;
+void travell(int src,int dest){
+    cout<<"source= "<<src<<" destination= "<<dest<<endl;
+    //base case
+    if(src==dest){
+        cout<<"reached at destination"<<endl;
+        return;
+    }
+    // increement the source
+    src++;
+    
+    //recursive case
+    travell(src,dest);
+}
+int main() {
+    int dest=7;
+    int src=0;
+    
+    cout<<endl;
+    travell(src,dest);
+
+    return 0;
+}
