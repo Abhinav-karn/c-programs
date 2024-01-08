@@ -18,7 +18,7 @@ int main()
         cout<<i.first<<" "<<i.second<<endl;
     }cout<<endl<<endl;
     
-    cout<<"finding 6-> "<<m.count(6)<<endl;
+    cout<<"finding 6-> "<<m.count(6)<<endl;    // show 1 if present and 0 for false.
     
     m.erase(3);
     
