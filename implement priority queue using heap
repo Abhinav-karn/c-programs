@@ -1,0 +1,46 @@
+#include <iostream>
+#include <queue>
+#include <vector>
+
+using namespace std;
+
+class PriorityQueue {
+private:
+    vector<pair<int, string>> heap;
+
+public:
+    void push(string item, int priority) {
+        heap.push_back(make_pair(priority, item));
+        push_heap(heap.begin(), heap.end(), greater<pair<int, string>>());  // range and comprator function
+    }
+
+    string pop() {
+        if (is_empty()) {
+            throw out_of_range("pop from an empty priority queue");
+        }
+
+        pop_heap(heap.begin(), heap.end(), greater<pair<int, string>>());  // range and comprator function
+        string item = heap.back().second;
+        heap.pop_back();
+
+        return item;
+    }
+
+    bool is_empty() const {
+        return heap.empty();
+    }
+};
+
+int main() {
+    PriorityQueue pq;
+
+    pq.push("Task 1", 3);
+    pq.push("Task 2", 1);
+    pq.push("Task 3", 2);
+
+    while (!pq.is_empty()) {
+        cout << pq.pop() << endl;
+    }
+
+    return 0;
+}
